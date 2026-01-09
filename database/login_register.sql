@@ -37,5 +37,8 @@ INSERT INTO messages (sender_name, sender_email, message_text) VALUES
 ('Sari Putri', 'sari@perusahaan.com', 'Saya ingin bekerja sama untuk pengiriman rutin.'),
 ('Budi Santoso', 'budi@gmail.com', 'Terima kasih, layanannya sangat cepat!');
 
+-- Update
+UPDATE user SET password = 'adminganteng123#' WHERE email = 'admin@tiv.com';
 
-
+-- Delete
+DELETE FROM user WHERE id = 2;

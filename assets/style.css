@@ -18,6 +18,8 @@ body {
     display: flex; justify-content: center; align-items: center;
     padding: 20px 8%; background: #4371e9;
     position: relative; z-index: 100;
+
+    
 }
 
 .nav-links { list-style: none; display: flex; gap: 20px; align-items: center; }

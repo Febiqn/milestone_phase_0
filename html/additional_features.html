@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiv Express | Calculator</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+                <li><a href="additional_features.html" class="btn-login">Shipping Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <h1>Cek Ongkir</h1>
+        <p>Hitung estimasi biaya pengiriman Anda dengan mudah.</p>
+    </main>
+
+    <section class="form-layout">
+        <div class="white-box">
+            <div style="text-align: left;">
+                <label style="font-weight: 600; font-size: 14px;">Berat Barang (kg)</label>
+                <input type="number" id="berat" placeholder="Masukkan Berat (kg)">
+            </div>
+            <div style="text-align: left;">
+    <label style="font-weight: 600; font-size: 14px;">Pilih Kota Tujuan</label>
+
+    <select id="tujuan">
+        <option value="16000">Bekasi (Rp 16.000/kg)</option>
+        <option value="18000">Bandung (Rp 18.000/kg)</option>
+        <option value="15000">Jakarta (Rp 15.000/kg)</option>
+        <option value="25000">Surabaya (Rp 25.000/kg)</option>
+        <option value="30000">Medan (Rp 30.000/kg)</option>
+    </select>
+</div>
+           
+            <button onclick="hitung()" class="btn-submit">Hitung Sekarang</button> 
+            <div id="hasil-box" style="margin-top: 20px; padding: 15px; border-radius: 8px; background: #f4f7ff; display: none;">
+                <h3 id="hasil" style="color: #1a3a8f;"></h3>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function hitung() {
+        // Ambil harga dari dropdown yang dipilih
+        let hargaPerKg = document.getElementById('tujuan').value;
+        // Ambil berat barang
+        let berat = document.getElementById('berat').value;
+        let resBox = document.getElementById('hasil-box');
+        let hasilText = document.getElementById('hasil');
+
+        if(berat > 0) {
+            // Rumus: Harga Kota x Berat
+            let total = hargaPerKg * berat;
+            
+            hasilText.innerText = "Estimasi: Rp " + total.toLocaleString('id-ID');
+            resBox.style.display = "block";
+        } else {
+            alert("Masukkan berat barang yang valid!");
+            resBox.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

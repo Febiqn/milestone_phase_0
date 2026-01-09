@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset margin & font keseluruhan */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background utama halaman */
+body {
+    background-color: #1a3a8f;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navigasi: Posisi menu di tengah */
+.navbar {
+    display: flex; justify-content: center; align-items: center;
+    padding: 20px 8%; background: #4371e9;
+    position: relative; z-index: 100;
+}
+
+.nav-links { list-style: none; display: flex; gap: 20px; align-items: center; }
+
+/* Link Navigasi: Efek transisi & hover */
+.nav-links a { 
+    text-decoration: none; 
+    color: white; 
+    font-size: 14px; 
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    opacity: 1;
+    font-weight: 700;
+}
+
+/* Tombol Login di Navbar */
+.btn-login {
+    background: #1a3a8f !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #ffffff !important;
+    color: #1a3a8f !important;
+}
+
+/* Hero: Area judul besar di atas */
+.hero {
+    min-height: 45vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 60px 20px 100px;
+}
+
+.hero h1 { font-size: 42px; margin-bottom: 15px; line-height: 1.2; }
+.hero p { opacity: 0.8; max-width: 700px; margin: 0 auto; }
+
+/* Tombol di bawah judul hero */
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-primary {
+    background: #ffffff;
+    color: #4371e9;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background: #f0f0f0; transform: translateY(-3px); }
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-3px); }
+
+/* Grid Kartu: Home/Services */
+.features {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 25px; padding: 0 8% 80px; margin-top: -100px;
+    position: relative; z-index: 10;
+}
+
+/* Style kartu putih */
+.feature-card {
+    background: white; color: #333; padding: 30px;
+    width: 320px; border-radius: 15px; text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.feature-card:hover { transform: translateY(-10px); }
+.feature-card h3 { color: #1a3a8f; margin-bottom: 10px; }
+
+/* Layout Form: Contact/Login */
+.form-layout {
+    display: flex; justify-content: center; 
+    padding: 0 20px 80px; margin-top: -80px;
+    position: relative; z-index: 10;
+}
+
+/* Kotak putih untuk form */
+.white-box {
+    background: white; color: #333; padding: 40px;
+    border-radius: 15px; width: 100%; max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Pengaturan input agar rapi ke bawah */
+input, select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    margin: 8px 0 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    display: block; 
+    outline: none; 
+    font-size: 14px;
+    color: #333;
+}
+
+/* Style label input */
+label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Tombol kirim/submit form */
+.btn-submit {
+    width: 100%; background: #1a3a8f; color: white;
+    padding: 15px; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: 600; font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-submit:hover { background: #4371e9; }
+
+/* Kotak hasil perhitungan kalkulator */
+#hasil-box {
+    margin-top: 20px; padding: 15px; border-radius: 8px; 
+    background: #f4f7ff; color: #1a3a8f; text-align: center;
+}
